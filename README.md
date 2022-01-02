@@ -26,7 +26,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='Walkthrough-add.gif' title='Video Walkthrough' width='' alt='Add Walkthrough' />
+<img src='Walkthrough-edit.gif' title='Video Walkthrough' width='' alt='Edit Walkthrough' />
+<img src='Walkthrough-persistence.gif' title='Video Walkthrough' width='' alt='Delete Walkthrough' />
+<img src='Walkthrough-delete.gif' title='Video Walkthrough' width='' alt='Persistence Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
