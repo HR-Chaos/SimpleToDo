@@ -1,0 +1,1658 @@
+Index: app/src/main/res/layout/activity_edit.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_edit.xml b/app/src/main/res/layout/activity_edit.xml
+--- a/app/src/main/res/layout/activity_edit.xml	(date 1641083557349)
++++ b/app/src/main/res/layout/activity_edit.xml	(date 1641083557349)
+@@ -1,0 +1,33 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".EditActivity">
++
++    <EditText
++        android:id="@+id/etItem"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentTop="true"
++        android:layout_alignParentEnd="true"
++        android:layout_marginStart="0dp"
++        android:layout_marginTop="0dp"
++        android:layout_marginEnd="0dp"
++        android:ems="10"
++        android:hint="Update Task"
++        android:inputType="textPersonName" />
++
++    <Button
++        android:id="@+id/saveButton"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_below="@+id/etItem"
++        android:layout_alignParentEnd="true"
++        android:layout_marginTop="0dp"
++        android:layout_marginEnd="10dp"
++        android:text="SAVE" />
++</RelativeLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(date 1641078279135)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1641078279135)
+@@ -1,0 +1,50 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".MainActivity">
++
++    <Button
++        android:id="@+id/buttonAdd"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_alignParentEnd="true"
++        android:layout_alignParentBottom="true"
++        android:layout_marginEnd="8dp"
++        android:layout_marginBottom="13dp"
++        android:backgroundTintMode="add"
++        android:text="Add" />
++
++    <EditText
++        android:id="@+id/editTxt"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentBottom="true"
++        android:layout_marginStart="-3dp"
++        android:layout_marginEnd="-92dp"
++        android:layout_marginBottom="14dp"
++        android:layout_toStartOf="@+id/buttonAdd"
++        android:editable="true"
++        android:ems="10"
++        android:hint="Add an item here"
++        android:inputType="textPersonName"
++        android:minHeight="48dp" />
++
++    <androidx.recyclerview.widget.RecyclerView
++        android:id="@+id/rvItems"
++        android:layout_width="match_parent"
++        android:layout_height="771dp"
++        android:layout_above="@+id/editTxt"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentTop="true"
++        android:layout_alignParentEnd="true"
++        android:layout_centerHorizontal="true"
++        android:layout_marginStart="0dp"
++        android:layout_marginTop="0dp"
++        android:layout_marginEnd="0dp"
++        android:layout_marginBottom="0dp" />
++</RelativeLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+--- a/app/src/main/res/values/colors.xml	(date 1640234512715)
++++ b/app/src/main/res/values/colors.xml	(date 1640234512715)
+@@ -1,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <color name="purple_200">#FFBB86FC</color>
++    <color name="purple_500">#FF6200EE</color>
++    <color name="purple_700">#FF3700B3</color>
++    <color name="teal_200">#FF03DAC5</color>
++    <color name="teal_700">#FF018786</color>
++    <color name="black">#FF000000</color>
++    <color name="white">#FFFFFFFF</color>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/themes.xml b/app/src/main/res/values/themes.xml
+--- a/app/src/main/res/values/themes.xml	(date 1640234512698)
++++ b/app/src/main/res/values/themes.xml	(date 1640234512698)
+@@ -1,0 +1,16 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++    <!-- Base application theme. -->
++    <style name="Theme.MyApplication1" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++        <!-- Primary brand color. -->
++        <item name="colorPrimary">@color/purple_500</item>
++        <item name="colorPrimaryVariant">@color/purple_700</item>
++        <item name="colorOnPrimary">@color/white</item>
++        <!-- Secondary brand color. -->
++        <item name="colorSecondary">@color/teal_200</item>
++        <item name="colorSecondaryVariant">@color/teal_700</item>
++        <item name="colorOnSecondary">@color/black</item>
++        <!-- Status bar color. -->
++        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
++        <!-- Customize your theme here. -->
++    </style>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(date 1641083213195)
++++ b/app/src/main/res/values/strings.xml	(date 1641083213195)
+@@ -1,0 +1,3 @@
++<resources>
++    <string name="app_name">My Application 1</string>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_launcher_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_launcher_background.xml b/app/src/main/res/drawable/ic_launcher_background.xml
+--- a/app/src/main/res/drawable/ic_launcher_background.xml	(date 1640234512538)
++++ b/app/src/main/res/drawable/ic_launcher_background.xml	(date 1640234512538)
+@@ -1,0 +1,170 @@
++<?xml version="1.0" encoding="utf-8"?>
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path
++        android:fillColor="#3DDC84"
++        android:pathData="M0,0h108v108h-108z" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M9,0L9,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,0L19,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,0L29,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,0L39,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,0L49,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,0L59,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,0L69,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,0L79,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M89,0L89,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M99,0L99,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,9L108,9"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,19L108,19"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,29L108,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,39L108,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,49L108,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,59L108,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,69L108,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,79L108,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,89L108,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,99L108,99"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,29L89,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,39L89,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,49L89,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,59L89,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,69L89,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,79L89,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,19L29,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,19L39,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,19L49,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,19L59,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,19L69,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,19L79,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++</vector>
+Index: app/src/main/res/drawable-v24/ic_launcher_foreground.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable-v24/ic_launcher_foreground.xml b/app/src/main/res/drawable-v24/ic_launcher_foreground.xml
+--- a/app/src/main/res/drawable-v24/ic_launcher_foreground.xml	(date 1640234512555)
++++ b/app/src/main/res/drawable-v24/ic_launcher_foreground.xml	(date 1640234512555)
+@@ -1,0 +1,30 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
++        <aapt:attr name="android:fillColor">
++            <gradient
++                android:endX="85.84757"
++                android:endY="92.4963"
++                android:startX="42.9492"
++                android:startY="49.59793"
++                android:type="linear">
++                <item
++                    android:color="#44000000"
++                    android:offset="0.0" />
++                <item
++                    android:color="#00000000"
++                    android:offset="1.0" />
++            </gradient>
++        </aapt:attr>
++    </path>
++    <path
++        android:fillColor="#FFFFFF"
++        android:fillType="nonZero"
++        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
++        android:strokeWidth="1"
++        android:strokeColor="#00000000" />
++</vector>
+\ No newline at end of file
+Index: app/src/main/res/values-night/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values-night/themes.xml b/app/src/main/res/values-night/themes.xml
+--- a/app/src/main/res/values-night/themes.xml	(date 1640234512732)
++++ b/app/src/main/res/values-night/themes.xml	(date 1640234512732)
+@@ -1,0 +1,16 @@
++<resources xmlns:tools="http://schemas.android.com/tools">
++    <!-- Base application theme. -->
++    <style name="Theme.MyApplication1" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++        <!-- Primary brand color. -->
++        <item name="colorPrimary">@color/purple_200</item>
++        <item name="colorPrimaryVariant">@color/purple_700</item>
++        <item name="colorOnPrimary">@color/black</item>
++        <!-- Secondary brand color. -->
++        <item name="colorSecondary">@color/teal_200</item>
++        <item name="colorSecondaryVariant">@color/teal_200</item>
++        <item name="colorOnSecondary">@color/black</item>
++        <!-- Status bar color. -->
++        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
++        <!-- Customize your theme here. -->
++    </style>
++</resources>
+\ No newline at end of file
+Index: app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml b/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+--- a/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(date 1640234512357)
++++ b/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(date 1640234512357)
+@@ -1,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@drawable/ic_launcher_background" />
++    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++</adaptive-icon>
+\ No newline at end of file
+Index: app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml b/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+--- a/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(date 1640234512567)
++++ b/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(date 1640234512567)
+@@ -1,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++    <background android:drawable="@drawable/ic_launcher_background" />
++    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++</adaptive-icon>
+\ No newline at end of file
+Index: app/src/main/java/com/example/myapplication1/EditActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapplication1/EditActivity.java b/app/src/main/java/com/example/myapplication1/EditActivity.java
+--- a/app/src/main/java/com/example/myapplication1/EditActivity.java	(date 1641085212927)
++++ b/app/src/main/java/com/example/myapplication1/EditActivity.java	(date 1641085212927)
+@@ -1,0 +1,43 @@
++package com.example.myapplication1;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
++
++public class EditActivity extends AppCompatActivity {
++
++    EditText etItem;
++    Button saveButton;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_edit);
++
++        etItem = findViewById(R.id.etItem);
++        saveButton = findViewById(R.id.saveButton);
++
++        getSupportActionBar().setTitle("Edit item");
++
++        etItem.setText(getIntent().getStringExtra(MainActivity.KEY_ITEM_TEXT));
++        saveButton.setOnClickListener(new View.OnClickListener(){
++            @Override
++            public void onClick(View view) {
++                //create an intent which will contain results
++                Intent i = new Intent();
++                //pass results
++                i.putExtra(MainActivity.KEY_ITEM_TEXT, etItem.getText().toString());
++                i.putExtra(MainActivity.KEY_ITEM_POSITION, getIntent().getExtras().getInt(MainActivity.KEY_ITEM_POSITION));
++                //set result
++                setResult(RESULT_OK, i);
++
++                //close activity and return
++                finish();
++            }
++        });
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/myapplication1/ItemsAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapplication1/ItemsAdapter.java b/app/src/main/java/com/example/myapplication1/ItemsAdapter.java
+--- a/app/src/main/java/com/example/myapplication1/ItemsAdapter.java	(date 1641084132711)
++++ b/app/src/main/java/com/example/myapplication1/ItemsAdapter.java	(date 1641084132711)
+@@ -1,0 +1,93 @@
++package com.example.myapplication1;
++
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.TextView;
++
++import androidx.annotation.NonNull;
++import androidx.recyclerview.widget.RecyclerView;
++
++import java.util.List;
++
++// responsible for dispaying data from the model
++public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
++
++    public interface OnLongClickListener {
++        void onItemLongClicked(int position);
++    }
++
++    public interface OnClickListener {
++        void onItemClicked(int position);
++    }
++
++    List<String> items;
++    OnLongClickListener longClickListener;
++    OnClickListener clickListener;
++
++    public ItemsAdapter(List<String> items, OnLongClickListener longClickListener, OnClickListener clickListener) {
++        this.items = items;
++        this.longClickListener = longClickListener;
++        this.clickListener = clickListener;
++    }
++
++    //-------------------------------------------------------------------------------------------
++
++    // Container to provide ez access to views that represent each row of the ist
++    class ViewHolder extends RecyclerView.ViewHolder {
++
++        TextView tvItem;
++
++        public ViewHolder (@NonNull View itemView)
++        {
++            super(itemView);
++            tvItem = itemView.findViewById(android.R.id.text1);
++        }
++
++        //update the view inside of the viewHolder with this data
++        public void bind(String item) {
++            tvItem.setText(item);
++            tvItem.setOnLongClickListener(new View.OnLongClickListener() {
++                @Override
++                public boolean onLongClick(View view) {
++                    //remove the item from the recyclerview
++                    longClickListener.onItemLongClicked(getAdapterPosition());
++                    return true;
++                }
++            });
++            tvItem.setOnClickListener(new View.OnClickListener(){
++                @Override
++                public void onClick(View view) {
++                    clickListener.onItemClicked(getAdapterPosition());
++                }
++            });
++        }
++    }
++
++    //--------------------------------------------------------------------------------------------
++
++    @NonNull
++    @Override
++    public ItemsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
++        // use layout inflator to inflate a view``
++        View todoView = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
++
++        // wrap it inside a view holder and return it
++        return new ViewHolder(todoView);
++    }
++
++    // responsible for binding data to a particular view holder
++    @Override
++    public void onBindViewHolder(@NonNull ItemsAdapter.ViewHolder holder, int position) {
++        // grab the item at the position
++        String item = items.get(position);
++        // bind the item into specified ViewHolder
++        holder.bind(item);
++    }
++
++    // tells rv how many items are on the list
++    @Override
++    public int getItemCount() {
++        return items.size();
++    }
++}
+Index: app/src/main/java/com/example/myapplication1/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapplication1/MainActivity.java b/app/src/main/java/com/example/myapplication1/MainActivity.java
+--- a/app/src/main/java/com/example/myapplication1/MainActivity.java	(date 1641085730959)
++++ b/app/src/main/java/com/example/myapplication1/MainActivity.java	(date 1641085730959)
+@@ -1,0 +1,131 @@
++package com.example.myapplication1;
++
++import androidx.annotation.Nullable;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.recyclerview.widget.LinearLayoutManager;
++import androidx.recyclerview.widget.RecyclerView;
++
++import android.annotation.SuppressLint;
++import android.content.Intent;
++import android.os.Bundle;
++import android.util.Log;
++import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.Toast;
++
++import org.apache.commons.io.FileUtils;
++
++import java.io.File;
++import java.io.IOException;
++import java.nio.charset.Charset;
++import java.util.ArrayList;
++import java.util.List;
++
++public class MainActivity extends AppCompatActivity {
++
++    public static final String KEY_ITEM_TEXT = "item_tex";
++    public static final String KEY_ITEM_POSITION = "item_position";
++    public static final int EDIT_TEXT_CODE = 901;
++
++    List<String> items;
++
++    //add handles from activity_main.xml
++    Button buttonAdd;
++    EditText editTxt;
++    RecyclerView rvItems;
++    ItemsAdapter itemsAdapter;
++
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_main);
++
++        buttonAdd = findViewById(R.id.buttonAdd);
++        editTxt = findViewById(R.id.editTxt);
++        rvItems = findViewById(R.id.rvItems);
++
++        loadItems();
++
++        ItemsAdapter.OnLongClickListener onLongClickListener = position -> { //usage of lambda for public void onLongClick(poistion)
++            //delete the item from the model
++            items.remove(position);
++            //notify adapter
++            itemsAdapter.notifyItemRemoved(position);
++            Toast.makeText(getApplicationContext(), "Item was Removed", Toast.LENGTH_SHORT).show();
++            saveItems();
++        };
++
++        ItemsAdapter.OnClickListener onClickListener = position -> {
++            //create new activity
++                //intent -- request to open something
++            Intent i = new Intent(MainActivity.this, EditActivity.class); //go from mainactivity to editactivity
++            //pass the data
++            i.putExtra(KEY_ITEM_TEXT, items.get(position));
++            i.putExtra(KEY_ITEM_POSITION, position);
++            //display the activity
++            startActivityForResult(i, EDIT_TEXT_CODE); //901
++        };
++
++        itemsAdapter = new ItemsAdapter(items, onLongClickListener, onClickListener);
++        rvItems.setAdapter(itemsAdapter);
++        rvItems.setLayoutManager(new LinearLayoutManager(this));
++
++        buttonAdd.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                String toDoItem = editTxt.getText().toString();
++                //add item to the model
++                items.add(toDoItem);
++                //notify adapter that an item is inserted
++                itemsAdapter.notifyItemInserted(items.size()-1);
++                editTxt.setText("");
++
++                Toast.makeText(getApplicationContext(), "Item was Added", Toast.LENGTH_SHORT).show();
++                saveItems();
++            }
++        });
++    }
++
++    @SuppressLint("MissingSuperCall")
++    @Override
++    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
++        if(resultCode == RESULT_OK && requestCode == EDIT_TEXT_CODE)
++        {
++            String itemText = data.getStringExtra(KEY_ITEM_TEXT);
++            int position = data.getExtras().getInt(KEY_ITEM_POSITION);
++            items.set(position, itemText);
++            itemsAdapter.notifyItemChanged(position);
++            saveItems();
++            Toast.makeText(getApplicationContext(), "Item updated", Toast.LENGTH_SHORT).show();
++        } else {
++            Log.w("MainActivity", "Unknown call to onActivityResult");
++        }
++    }
++
++    private File getDataFile() {
++        return new File(getFilesDir(), "data.txt");
++    }
++
++    // load items by reading every line
++    private void loadItems(){
++        try {
++            items = new ArrayList<>(FileUtils.readLines(getDataFile(), Charset.defaultCharset()));
++        } catch (IOException e) {
++            Log.e("MainActivity", "Error reading items", e);
++            items = new ArrayList<>();
++        }
++    }
++
++    // write the file
++
++    private void saveItems() {
++        try {
++            FileUtils.writeLines(getDataFile(), items);
++        } catch (IOException e) {
++            Log.e("MainActivity", "Error reading items", e);
++        }
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(date 1641083213370)
++++ b/app/src/main/AndroidManifest.xml	(date 1641083213370)
+@@ -1,0 +1,26 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.example.myapplication1">
++
++    <application
++        android:allowBackup="true"
++        android:icon="@mipmap/ic_launcher"
++        android:label="@string/app_name"
++        android:roundIcon="@mipmap/ic_launcher_round"
++        android:supportsRtl="true"
++        android:theme="@style/Theme.MyApplication1">
++        <activity
++            android:name=".EditActivity"
++            android:exported="false" />
++        <activity
++            android:name=".MainActivity"
++            android:exported="true">
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity>
++    </application>
++
++</manifest>
+\ No newline at end of file
+Index: app/src/test/java/com/example/myapplication1/ExampleUnitTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/test/java/com/example/myapplication1/ExampleUnitTest.java b/app/src/test/java/com/example/myapplication1/ExampleUnitTest.java
+--- a/app/src/test/java/com/example/myapplication1/ExampleUnitTest.java	(date 1640234512337)
++++ b/app/src/test/java/com/example/myapplication1/ExampleUnitTest.java	(date 1640234512337)
+@@ -1,0 +1,17 @@
++package com.example.myapplication1;
++
++import org.junit.Test;
++
++import static org.junit.Assert.*;
++
++/**
++ * Example local unit test, which will execute on the development machine (host).
++ *
++ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
++ */
++public class ExampleUnitTest {
++    @Test
++    public void addition_isCorrect() {
++        assertEquals(4, 2 + 2);
++    }
++}
+\ No newline at end of file
+Index: app/src/androidTest/java/com/example/myapplication1/ExampleInstrumentedTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/androidTest/java/com/example/myapplication1/ExampleInstrumentedTest.java b/app/src/androidTest/java/com/example/myapplication1/ExampleInstrumentedTest.java
+--- a/app/src/androidTest/java/com/example/myapplication1/ExampleInstrumentedTest.java	(date 1640234512313)
++++ b/app/src/androidTest/java/com/example/myapplication1/ExampleInstrumentedTest.java	(date 1640234512313)
+@@ -1,0 +1,26 @@
++package com.example.myapplication1;
++
++import android.content.Context;
++
++import androidx.test.platform.app.InstrumentationRegistry;
++import androidx.test.ext.junit.runners.AndroidJUnit4;
++
++import org.junit.Test;
++import org.junit.runner.RunWith;
++
++import static org.junit.Assert.*;
++
++/**
++ * Instrumented test, which will execute on an Android device.
++ *
++ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
++ */
++@RunWith(AndroidJUnit4.class)
++public class ExampleInstrumentedTest {
++    @Test
++    public void useAppContext() {
++        // Context of the app under test.
++        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
++        assertEquals("com.example.myapplication1", appContext.getPackageName());
++    }
++}
+\ No newline at end of file
+Index: app/build/generated/source/buildConfig/debug/com/example/myapplication1/BuildConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build/generated/source/buildConfig/debug/com/example/myapplication1/BuildConfig.java b/app/build/generated/source/buildConfig/debug/com/example/myapplication1/BuildConfig.java
+--- a/app/build/generated/source/buildConfig/debug/com/example/myapplication1/BuildConfig.java	(date 1640235216332)
++++ b/app/build/generated/source/buildConfig/debug/com/example/myapplication1/BuildConfig.java	(date 1640235216332)
+@@ -1,0 +1,12 @@
++/**
++ * Automatically generated file. DO NOT MODIFY
++ */
++package com.example.myapplication1;
++
++public final class BuildConfig {
++  public static final boolean DEBUG = Boolean.parseBoolean("true");
++  public static final String APPLICATION_ID = "com.example.myapplication1";
++  public static final String BUILD_TYPE = "debug";
++  public static final int VERSION_CODE = 1;
++  public static final String VERSION_NAME = "1.0";
++}
+Index: app/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/.gitignore b/app/.gitignore
+--- a/app/.gitignore	(date 1640234511028)
++++ b/app/.gitignore	(date 1640234511028)
+@@ -1,0 +1,1 @@
++/build
+\ No newline at end of file
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(date 1641082382324)
++++ b/app/build.gradle	(date 1641082382324)
+@@ -1,0 +1,39 @@
++plugins {
++    id 'com.android.application'
++}
++
++android {
++    compileSdk 32
++
++    defaultConfig {
++        applicationId "com.example.myapplication1"
++        minSdk 21
++        targetSdk 32
++        versionCode 1
++        versionName "1.0"
++
++        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
++    }
++
++    buildTypes {
++        release {
++            minifyEnabled false
++            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
++        }
++    }
++    compileOptions {
++        sourceCompatibility JavaVersion.VERSION_1_8
++        targetCompatibility JavaVersion.VERSION_1_8
++    }
++}
++
++dependencies {
++
++    implementation 'androidx.appcompat:appcompat:1.2.0'
++    implementation 'com.google.android.material:material:1.3.0'
++    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
++    testImplementation 'junit:junit:4.+'
++    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
++    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
++    implementation 'commons-io:commons-io:2.11.0'
++}
+\ No newline at end of file
+Index: app/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/proguard-rules.pro b/app/proguard-rules.pro
+--- a/app/proguard-rules.pro	(date 1640234511123)
++++ b/app/proguard-rules.pro	(date 1640234511123)
+@@ -1,0 +1,21 @@
++# Add project specific ProGuard rules here.
++# You can control the set of applied configuration files using the
++# proguardFiles setting in build.gradle.
++#
++# For more details, see
++#   http://developer.android.com/guide/developing/tools/proguard.html
++
++# If your project uses WebView with JS, uncomment the following
++# and specify the fully qualified class name to the JavaScript interface
++# class:
++#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
++#   public *;
++#}
++
++# Uncomment this to preserve the line number information for
++# debugging stack traces.
++#-keepattributes SourceFile,LineNumberTable
++
++# If you keep the line number information, uncomment this to
++# hide the original source file name.
++#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+diff --git a/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt b/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt
+deleted file mode 100644
+diff --git a/app/build/outputs/apk/debug/app-debug.apk b/app/build/outputs/apk/debug/app-debug.apk
+deleted file mode 100644
+diff --git a/app/build/outputs/apk/debug/output-metadata.json b/app/build/outputs/apk/debug/output-metadata.json
+deleted file mode 100644
+diff --git a/app/build/outputs/logs/manifest-merger-debug-report.txt b/app/build/outputs/logs/manifest-merger-debug-report.txt
+deleted file mode 100644
+diff --git a/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml b/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml
+deleted file mode 100644
+diff --git a/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex b/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex b/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex b/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values_values.arsc.flat b/app/build/intermediates/merged_res/debug/values_values.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/layout_activity_edit.xml.flat b/app/build/intermediates/merged_res/debug/layout_activity_edit.xml.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat b/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-af_values-af.arsc.flat b/app/build/intermediates/merged_res/debug/values-af_values-af.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-am_values-am.arsc.flat b/app/build/intermediates/merged_res/debug/values-am_values-am.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ar_values-ar.arsc.flat b/app/build/intermediates/merged_res/debug/values-ar_values-ar.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-as_values-as.arsc.flat b/app/build/intermediates/merged_res/debug/values-as_values-as.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-az_values-az.arsc.flat b/app/build/intermediates/merged_res/debug/values-az_values-az.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-be_values-be.arsc.flat b/app/build/intermediates/merged_res/debug/values-be_values-be.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-bg_values-bg.arsc.flat b/app/build/intermediates/merged_res/debug/values-bg_values-bg.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-bn_values-bn.arsc.flat b/app/build/intermediates/merged_res/debug/values-bn_values-bn.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-bs_values-bs.arsc.flat b/app/build/intermediates/merged_res/debug/values-bs_values-bs.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ca_values-ca.arsc.flat b/app/build/intermediates/merged_res/debug/values-ca_values-ca.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-cs_values-cs.arsc.flat b/app/build/intermediates/merged_res/debug/values-cs_values-cs.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-da_values-da.arsc.flat b/app/build/intermediates/merged_res/debug/values-da_values-da.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-de_values-de.arsc.flat b/app/build/intermediates/merged_res/debug/values-de_values-de.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-el_values-el.arsc.flat b/app/build/intermediates/merged_res/debug/values-el_values-el.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-es_values-es.arsc.flat b/app/build/intermediates/merged_res/debug/values-es_values-es.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-et_values-et.arsc.flat b/app/build/intermediates/merged_res/debug/values-et_values-et.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-eu_values-eu.arsc.flat b/app/build/intermediates/merged_res/debug/values-eu_values-eu.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-fa_values-fa.arsc.flat b/app/build/intermediates/merged_res/debug/values-fa_values-fa.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-fi_values-fi.arsc.flat b/app/build/intermediates/merged_res/debug/values-fi_values-fi.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-fr_values-fr.arsc.flat b/app/build/intermediates/merged_res/debug/values-fr_values-fr.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-gl_values-gl.arsc.flat b/app/build/intermediates/merged_res/debug/values-gl_values-gl.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-gu_values-gu.arsc.flat b/app/build/intermediates/merged_res/debug/values-gu_values-gu.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-hi_values-hi.arsc.flat b/app/build/intermediates/merged_res/debug/values-hi_values-hi.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-hr_values-hr.arsc.flat b/app/build/intermediates/merged_res/debug/values-hr_values-hr.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-hu_values-hu.arsc.flat b/app/build/intermediates/merged_res/debug/values-hu_values-hu.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-hy_values-hy.arsc.flat b/app/build/intermediates/merged_res/debug/values-hy_values-hy.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-in_values-in.arsc.flat b/app/build/intermediates/merged_res/debug/values-in_values-in.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-is_values-is.arsc.flat b/app/build/intermediates/merged_res/debug/values-is_values-is.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-it_values-it.arsc.flat b/app/build/intermediates/merged_res/debug/values-it_values-it.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-iw_values-iw.arsc.flat b/app/build/intermediates/merged_res/debug/values-iw_values-iw.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ja_values-ja.arsc.flat b/app/build/intermediates/merged_res/debug/values-ja_values-ja.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ka_values-ka.arsc.flat b/app/build/intermediates/merged_res/debug/values-ka_values-ka.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-kk_values-kk.arsc.flat b/app/build/intermediates/merged_res/debug/values-kk_values-kk.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-km_values-km.arsc.flat b/app/build/intermediates/merged_res/debug/values-km_values-km.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-kn_values-kn.arsc.flat b/app/build/intermediates/merged_res/debug/values-kn_values-kn.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ko_values-ko.arsc.flat b/app/build/intermediates/merged_res/debug/values-ko_values-ko.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ky_values-ky.arsc.flat b/app/build/intermediates/merged_res/debug/values-ky_values-ky.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-lo_values-lo.arsc.flat b/app/build/intermediates/merged_res/debug/values-lo_values-lo.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-lt_values-lt.arsc.flat b/app/build/intermediates/merged_res/debug/values-lt_values-lt.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-lv_values-lv.arsc.flat b/app/build/intermediates/merged_res/debug/values-lv_values-lv.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-mk_values-mk.arsc.flat b/app/build/intermediates/merged_res/debug/values-mk_values-mk.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ml_values-ml.arsc.flat b/app/build/intermediates/merged_res/debug/values-ml_values-ml.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-mn_values-mn.arsc.flat b/app/build/intermediates/merged_res/debug/values-mn_values-mn.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-mr_values-mr.arsc.flat b/app/build/intermediates/merged_res/debug/values-mr_values-mr.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ms_values-ms.arsc.flat b/app/build/intermediates/merged_res/debug/values-ms_values-ms.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-my_values-my.arsc.flat b/app/build/intermediates/merged_res/debug/values-my_values-my.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-nb_values-nb.arsc.flat b/app/build/intermediates/merged_res/debug/values-nb_values-nb.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ne_values-ne.arsc.flat b/app/build/intermediates/merged_res/debug/values-ne_values-ne.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-nl_values-nl.arsc.flat b/app/build/intermediates/merged_res/debug/values-nl_values-nl.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-or_values-or.arsc.flat b/app/build/intermediates/merged_res/debug/values-or_values-or.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-pa_values-pa.arsc.flat b/app/build/intermediates/merged_res/debug/values-pa_values-pa.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-pl_values-pl.arsc.flat b/app/build/intermediates/merged_res/debug/values-pl_values-pl.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-pt_values-pt.arsc.flat b/app/build/intermediates/merged_res/debug/values-pt_values-pt.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ro_values-ro.arsc.flat b/app/build/intermediates/merged_res/debug/values-ro_values-ro.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ru_values-ru.arsc.flat b/app/build/intermediates/merged_res/debug/values-ru_values-ru.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-si_values-si.arsc.flat b/app/build/intermediates/merged_res/debug/values-si_values-si.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-sk_values-sk.arsc.flat b/app/build/intermediates/merged_res/debug/values-sk_values-sk.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-sl_values-sl.arsc.flat b/app/build/intermediates/merged_res/debug/values-sl_values-sl.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-sq_values-sq.arsc.flat b/app/build/intermediates/merged_res/debug/values-sq_values-sq.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-sr_values-sr.arsc.flat b/app/build/intermediates/merged_res/debug/values-sr_values-sr.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-sv_values-sv.arsc.flat b/app/build/intermediates/merged_res/debug/values-sv_values-sv.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-sw_values-sw.arsc.flat b/app/build/intermediates/merged_res/debug/values-sw_values-sw.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ta_values-ta.arsc.flat b/app/build/intermediates/merged_res/debug/values-ta_values-ta.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-te_values-te.arsc.flat b/app/build/intermediates/merged_res/debug/values-te_values-te.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-th_values-th.arsc.flat b/app/build/intermediates/merged_res/debug/values-th_values-th.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-tl_values-tl.arsc.flat b/app/build/intermediates/merged_res/debug/values-tl_values-tl.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-tr_values-tr.arsc.flat b/app/build/intermediates/merged_res/debug/values-tr_values-tr.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-uk_values-uk.arsc.flat b/app/build/intermediates/merged_res/debug/values-uk_values-uk.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ur_values-ur.arsc.flat b/app/build/intermediates/merged_res/debug/values-ur_values-ur.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-uz_values-uz.arsc.flat b/app/build/intermediates/merged_res/debug/values-uz_values-uz.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-vi_values-vi.arsc.flat b/app/build/intermediates/merged_res/debug/values-vi_values-vi.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-zu_values-zu.arsc.flat b/app/build/intermediates/merged_res/debug/values-zu_values-zu.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-v16_values-v16.arsc.flat b/app/build/intermediates/merged_res/debug/values-v16_values-v16.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-v17_values-v17.arsc.flat b/app/build/intermediates/merged_res/debug/values-v17_values-v17.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-v18_values-v18.arsc.flat b/app/build/intermediates/merged_res/debug/values-v18_values-v18.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-v21_values-v21.arsc.flat b/app/build/intermediates/merged_res/debug/values-v21_values-v21.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-v22_values-v22.arsc.flat b/app/build/intermediates/merged_res/debug/values-v22_values-v22.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-v23_values-v23.arsc.flat b/app/build/intermediates/merged_res/debug/values-v23_values-v23.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-v24_values-v24.arsc.flat b/app/build/intermediates/merged_res/debug/values-v24_values-v24.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-v25_values-v25.arsc.flat b/app/build/intermediates/merged_res/debug/values-v25_values-v25.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-v26_values-v26.arsc.flat b/app/build/intermediates/merged_res/debug/values-v26_values-v26.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-v28_values-v28.arsc.flat b/app/build/intermediates/merged_res/debug/values-v28_values-v28.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat b/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat b/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-land_values-land.arsc.flat b/app/build/intermediates/merged_res/debug/values-land_values-land.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-port_values-port.arsc.flat b/app/build/intermediates/merged_res/debug/values-port_values-port.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat b/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat b/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat b/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-en-rAU_values-en-rAU.arsc.flat b/app/build/intermediates/merged_res/debug/values-en-rAU_values-en-rAU.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-en-rCA_values-en-rCA.arsc.flat b/app/build/intermediates/merged_res/debug/values-en-rCA_values-en-rCA.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-en-rGB_values-en-rGB.arsc.flat b/app/build/intermediates/merged_res/debug/values-en-rGB_values-en-rGB.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-en-rIN_values-en-rIN.arsc.flat b/app/build/intermediates/merged_res/debug/values-en-rIN_values-en-rIN.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-en-rXC_values-en-rXC.arsc.flat b/app/build/intermediates/merged_res/debug/values-en-rXC_values-en-rXC.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-es-rUS_values-es-rUS.arsc.flat b/app/build/intermediates/merged_res/debug/values-es-rUS_values-es-rUS.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-fr-rCA_values-fr-rCA.arsc.flat b/app/build/intermediates/merged_res/debug/values-fr-rCA_values-fr-rCA.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-pt-rBR_values-pt-rBR.arsc.flat b/app/build/intermediates/merged_res/debug/values-pt-rBR_values-pt-rBR.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-pt-rPT_values-pt-rPT.arsc.flat b/app/build/intermediates/merged_res/debug/values-pt-rPT_values-pt-rPT.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-zh-rCN_values-zh-rCN.arsc.flat b/app/build/intermediates/merged_res/debug/values-zh-rCN_values-zh-rCN.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-zh-rHK_values-zh-rHK.arsc.flat b/app/build/intermediates/merged_res/debug/values-zh-rHK_values-zh-rHK.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-zh-rTW_values-zh-rTW.arsc.flat b/app/build/intermediates/merged_res/debug/values-zh-rTW_values-zh-rTW.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat b/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat b/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat b/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-hdpi-v4_values-hdpi-v4.arsc.flat b/app/build/intermediates/merged_res/debug/values-hdpi-v4_values-hdpi-v4.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat b/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat b/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat b/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-b+es+419_values-b+es+419.arsc.flat b/app/build/intermediates/merged_res/debug/values-b+es+419_values-b+es+419.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-large-v4_values-large-v4.arsc.flat b/app/build/intermediates/merged_res/debug/values-large-v4_values-large-v4.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-night-v8_values-night-v8.arsc.flat b/app/build/intermediates/merged_res/debug/values-night-v8_values-night-v8.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-small-v4_values-small-v4.arsc.flat b/app/build/intermediates/merged_res/debug/values-small-v4_values-small-v4.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat b/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat b/app/build/intermediates/merged_res/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ldltr-v21_values-ldltr-v21.arsc.flat b/app/build/intermediates/merged_res/debug/values-ldltr-v21_values-ldltr-v21.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-ldrtl-v17_values-ldrtl-v17.arsc.flat b/app/build/intermediates/merged_res/debug/values-ldrtl-v17_values-ldrtl-v17.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-watch-v20_values-watch-v20.arsc.flat b/app/build/intermediates/merged_res/debug/values-watch-v20_values-watch-v20.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-watch-v21_values-watch-v21.arsc.flat b/app/build/intermediates/merged_res/debug/values-watch-v21_values-watch-v21.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-xlarge-v4_values-xlarge-v4.arsc.flat b/app/build/intermediates/merged_res/debug/values-xlarge-v4_values-xlarge-v4.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat b/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-h720dp-v13_values-h720dp-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-h720dp-v13_values-h720dp-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-sw600dp-v13_values-sw600dp-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-sw600dp-v13_values-sw600dp-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat b/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-h320dp-port-v13_values-h320dp-port-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-h320dp-port-v13_values-h320dp-port-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-h360dp-land-v13_values-h360dp-land-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-h360dp-land-v13_values-h360dp-land-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-h480dp-land-v13_values-h480dp-land-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-h480dp-land-v13_values-h480dp-land-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-h600dp-port-v13_values-h600dp-port-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-h600dp-port-v13_values-h600dp-port-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-w320dp-land-v13_values-w320dp-land-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-w320dp-land-v13_values-w320dp-land-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-w360dp-port-v13_values-w360dp-port-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-w360dp-port-v13_values-w360dp-port-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-w480dp-port-v13_values-w480dp-port-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-w480dp-port-v13_values-w480dp-port-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-w550dp-land-v13_values-w550dp-land-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-w550dp-land-v13_values-w550dp-land-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res/debug/values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat b/app/build/intermediates/merged_res/debug/values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0 b/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources b/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt b/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/mergeDebugAssets/merger.xml b/app/build/intermediates/incremental/mergeDebugAssets/merger.xml
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/mergeDebugShaders/merger.xml b/app/build/intermediates/incremental/mergeDebugShaders/merger.xml
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+r6b4QCHrbiKyov6CSmnmTEX0R4= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+r6b4QCHrbiKyov6CSmnmTEX0R4=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1qoVL1Klldt+HaOhKAh+23IsX1w= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1qoVL1Klldt+HaOhKAh+23IsX1w=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1qWVaVUPzsGkrj6HF_JzKyUDcLs= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1qWVaVUPzsGkrj6HF_JzKyUDcLs=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1xYjIpu2RrZ6CSMruGqFympZUng= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1xYjIpu2RrZ6CSMruGqFympZUng=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/4pbGtrLiThczMEnzF8h7nFNq+ew= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/4pbGtrLiThczMEnzF8h7nFNq+ew=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/6cMVFJT2lsgpVWkm47iO694pOHs= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/6cMVFJT2lsgpVWkm47iO694pOHs=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/7JEU85VXkYpj2w0SvhCEo5BLg+w= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/7JEU85VXkYpj2w0SvhCEo5BLg+w=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8g2e24wf7DQbMvv84PVyb4hRH1s= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8g2e24wf7DQbMvv84PVyb4hRH1s=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/DFbT_Au0MKMSESA4hM9nNGsdhYA= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/DFbT_Au0MKMSESA4hM9nNGsdhYA=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/DQwz4EVQRJP+IKZbqbD59gNNNCw= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/DQwz4EVQRJP+IKZbqbD59gNNNCw=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/E7UH8zgOORG9QfWAvBvW49bbmho= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/E7UH8zgOORG9QfWAvBvW49bbmho=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/EcX02W++obiLMKzRqfuvNp6PODw= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/EcX02W++obiLMKzRqfuvNp6PODw=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/eHMwIPnJw8Hk027E1YL2Poh2jhs= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/eHMwIPnJw8Hk027E1YL2Poh2jhs=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/FfSdkTEti6YIKFVCU5rmaNup_MI= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/FfSdkTEti6YIKFVCU5rmaNup_MI=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Gk6BnBUO_KhahMLekjYLkhsvD8w= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Gk6BnBUO_KhahMLekjYLkhsvD8w=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/GYK0ubhZAppfDbeWGXZ8GaQAK3s= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/GYK0ubhZAppfDbeWGXZ8GaQAK3s=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/HDYRfA5QuWeHUaOf84Yv6TabKhk= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/HDYRfA5QuWeHUaOf84Yv6TabKhk=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Hgz+X+o808O+SY_dShVLkmlLxcI= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Hgz+X+o808O+SY_dShVLkmlLxcI=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/hU+ffoNFRqd08xOTYJJ0pHKH3vs= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/hU+ffoNFRqd08xOTYJJ0pHKH3vs=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Ihgq8MJHgI4L0Z5rf1icvNwRetI= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Ihgq8MJHgI4L0Z5rf1icvNwRetI=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/J4KS09B437QAP_aPxUt0rzmCFPo= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/J4KS09B437QAP_aPxUt0rzmCFPo=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/jYrrH6m7GOtfsfAZCevUkXfO_w0= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/jYrrH6m7GOtfsfAZCevUkXfO_w0=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/k2QrSnkKpXICaDsFSTbShl_hzaQ= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/k2QrSnkKpXICaDsFSTbShl_hzaQ=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/K4qej5M98qph8+dDVqEyyt2Owuo= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/K4qej5M98qph8+dDVqEyyt2Owuo=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/kqq3hPVKua_5oe0fes85S9UmILg= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/kqq3hPVKua_5oe0fes85S9UmILg=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Nwuf+ITBv2_O++4M1wLV+fXQY84= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Nwuf+ITBv2_O++4M1wLV+fXQY84=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/oxb2qs1iAw6EZwXMUvNSfLgD1pk= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/oxb2qs1iAw6EZwXMUvNSfLgD1pk=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/pba1uAtDKwOQHarIv_FJhQ09f38= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/pba1uAtDKwOQHarIv_FJhQ09f38=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/PD_eagwMfI+_5Bm9+9T9CCV672Y= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/PD_eagwMfI+_5Bm9+9T9CCV672Y=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Q6CkFp+ybuntb+H_MJJdqVpJ4Aw= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Q6CkFp+ybuntb+H_MJJdqVpJ4Aw=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/qGn2krIn9k21nyFPtqYFF6jyfXY= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/qGn2krIn9k21nyFPtqYFF6jyfXY=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uGUjnGQEnFbrXoq+4LDF_VlfzIE= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uGUjnGQEnFbrXoq+4LDF_VlfzIE=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/VDI3ozytbXF7PwPcgt30ei4eubw= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/VDI3ozytbXF7PwPcgt30ei4eubw=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/vFi0am4FBzhSN14KsOBPqMg8RWU= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/vFi0am4FBzhSN14KsOBPqMg8RWU=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/WNwpSCGSeaOb1xvGVD_T2svdF_o= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/WNwpSCGSeaOb1xvGVD_T2svdF_o=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ycORc74EMxhhaQm9x1uZXnA1qc0= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ycORc74EMxhhaQm9x1uZXnA1qc0=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/YZzB6ZX7JYx54cpM8qpuEVAzWYw= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/YZzB6ZX7JYx54cpM8qpuEVAzWYw=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Z+XJsiQQ4PC8962P6kCG5iQvEXg= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Z+XJsiQQ4PC8962P6kCG5iQvEXg=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zQNBfigZj+zG8_A4QlWBpngdKpY= b/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zQNBfigZj+zG8_A4QlWBpngdKpY=
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state b/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/mergeDebugResources/merger.xml b/app/build/intermediates/incremental/mergeDebugResources/merger.xml
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties b/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties
+deleted file mode 100644
+diff --git a/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml b/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+deleted file mode 100644
+diff --git a/app/build/intermediates/app_metadata/debug/app-metadata.properties b/app/build/intermediates/app_metadata/debug/app-metadata.properties
+deleted file mode 100644
+diff --git a/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_0/graph.bin b/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_0/graph.bin
+deleted file mode 100644
+diff --git a/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_1/graph.bin b/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_1/graph.bin
+deleted file mode 100644
+diff --git a/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_2/graph.bin b/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_2/graph.bin
+deleted file mode 100644
+diff --git a/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_3/graph.bin b/app/build/intermediates/desugar_graph/debug/out/currentProject/dirs_bucket_3/graph.bin
+deleted file mode 100644
+diff --git a/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_4678acd1aa2547c885ee42113337a1d7c0d7d101a5c25bc5c9dcc1dd77235484_bucket_0/graph.bin b/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_4678acd1aa2547c885ee42113337a1d7c0d7d101a5c25bc5c9dcc1dd77235484_bucket_0/graph.bin
+deleted file mode 100644
+diff --git a/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_4678acd1aa2547c885ee42113337a1d7c0d7d101a5c25bc5c9dcc1dd77235484_bucket_1/graph.bin b/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_4678acd1aa2547c885ee42113337a1d7c0d7d101a5c25bc5c9dcc1dd77235484_bucket_1/graph.bin
+deleted file mode 100644
+diff --git a/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_4678acd1aa2547c885ee42113337a1d7c0d7d101a5c25bc5c9dcc1dd77235484_bucket_2/graph.bin b/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_4678acd1aa2547c885ee42113337a1d7c0d7d101a5c25bc5c9dcc1dd77235484_bucket_2/graph.bin
+deleted file mode 100644
+diff --git a/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_4678acd1aa2547c885ee42113337a1d7c0d7d101a5c25bc5c9dcc1dd77235484_bucket_3/graph.bin b/app/build/intermediates/desugar_graph/debug/out/currentProject/jar_4678acd1aa2547c885ee42113337a1d7c0d7d101a5c25bc5c9dcc1dd77235484_bucket_3/graph.bin
+deleted file mode 100644
+diff --git a/app/build/intermediates/processed_res/debug/out/resources-debug.ap_ b/app/build/intermediates/processed_res/debug/out/resources-debug.ap_
+deleted file mode 100644
+diff --git a/app/build/intermediates/processed_res/debug/out/output-metadata.json b/app/build/intermediates/processed_res/debug/out/output-metadata.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_java_res/debug/base.jar b/app/build/intermediates/merged_java_res/debug/base.jar
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml b/app/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+deleted file mode 100644
+diff --git a/app/build/intermediates/navigation_json/debug/navigation.json b/app/build/intermediates/navigation_json/debug/navigation.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml b/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_manifests/debug/output-metadata.json b/app/build/intermediates/merged_manifests/debug/output-metadata.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml b/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml
+deleted file mode 100644
+diff --git a/app/build/intermediates/packaged_manifests/debug/output-metadata.json b/app/build/intermediates/packaged_manifests/debug/output-metadata.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/BuildConfig.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/BuildConfig.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/EditActivity.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/EditActivity.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/MainActivity.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/MainActivity.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/EditActivity$1.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/EditActivity$1.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/MainActivity$1.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/MainActivity$1.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter$ViewHolder.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter$ViewHolder.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter$ViewHolder$1.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter$ViewHolder$1.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter$ViewHolder$2.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter$ViewHolder$2.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter$OnClickListener.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter$OnClickListener.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter$OnLongClickListener.dex b/app/build/intermediates/project_dex_archive/debug/out/com/example/myapplication1/ItemsAdapter$OnLongClickListener.dex
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/f009decaf6863da240daae42f086d7fa89d9c4f43c3e3fa39b773571b046fac1_0.jar b/app/build/intermediates/project_dex_archive/debug/out/f009decaf6863da240daae42f086d7fa89d9c4f43c3e3fa39b773571b046fac1_0.jar
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/f009decaf6863da240daae42f086d7fa89d9c4f43c3e3fa39b773571b046fac1_1.jar b/app/build/intermediates/project_dex_archive/debug/out/f009decaf6863da240daae42f086d7fa89d9c4f43c3e3fa39b773571b046fac1_1.jar
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/f009decaf6863da240daae42f086d7fa89d9c4f43c3e3fa39b773571b046fac1_2.jar b/app/build/intermediates/project_dex_archive/debug/out/f009decaf6863da240daae42f086d7fa89d9c4f43c3e3fa39b773571b046fac1_2.jar
+deleted file mode 100644
+diff --git a/app/build/intermediates/project_dex_archive/debug/out/f009decaf6863da240daae42f086d7fa89d9c4f43c3e3fa39b773571b046fac1_3.jar b/app/build/intermediates/project_dex_archive/debug/out/f009decaf6863da240daae42f086d7fa89d9c4f43c3e3fa39b773571b046fac1_3.jar
+deleted file mode 100644
+diff --git a/app/build/intermediates/runtime_symbol_list/debug/R.txt b/app/build/intermediates/runtime_symbol_list/debug/R.txt
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json b/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-af.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-af.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-am.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-am.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ar.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ar.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-as.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-as.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-az.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-az.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-be.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-be.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bg.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bg.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bn.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bn.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bs.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bs.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ca.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ca.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-cs.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-cs.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-da.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-da.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-de.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-de.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-el.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-el.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-et.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-et.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-eu.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-eu.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fa.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fa.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fi.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fi.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gl.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gl.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gu.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gu.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hi.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hi.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hr.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hr.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hu.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hu.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hy.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hy.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-in.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-in.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-is.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-is.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-it.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-it.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-iw.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-iw.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ja.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ja.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ka.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ka.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kk.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kk.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-km.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-km.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kn.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kn.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ko.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ko.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ky.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ky.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lo.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lo.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lt.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lt.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lv.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lv.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mk.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mk.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ml.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ml.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mn.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mn.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mr.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mr.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ms.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ms.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-my.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-my.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nb.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nb.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ne.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ne.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nl.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nl.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-or.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-or.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pa.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pa.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pl.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pl.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ro.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ro.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ru.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ru.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-si.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-si.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sk.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sk.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sl.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sl.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sq.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sq.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sr.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sr.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sv.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sv.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ta.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ta.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-te.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-te.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-th.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-th.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tl.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tl.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tr.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tr.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uk.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uk.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ur.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ur.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uz.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uz.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-vi.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-vi.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zu.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zu.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v16.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v16.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v17.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v17.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v18.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v18.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v21.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v21.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v22.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v22.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v23.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v23.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v24.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v24.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v25.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v25.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v26.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v26.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v28.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v28.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-land.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-land.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-port.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-port.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rAU.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rAU.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rCA.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rCA.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rGB.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rGB.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rIN.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rIN.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rXC.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rXC.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es-rUS.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es-rUS.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr-rCA.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr-rCA.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rBR.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rBR.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rPT.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rPT.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rCN.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rCN.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rHK.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rHK.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rTW.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rTW.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hdpi-v4.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hdpi-v4.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+es+419.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+es+419.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-large-v4.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-large-v4.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-night-v8.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-night-v8.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-small-v4.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-small-v4.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+sr+Latn.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+sr+Latn.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldltr-v21.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldltr-v21.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldrtl-v17.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldrtl-v17.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v20.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v20.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v21.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v21.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-xlarge-v4.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-xlarge-v4.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h720dp-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h720dp-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw600dp-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw600dp-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h320dp-port-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h320dp-port-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h360dp-land-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h360dp-land-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h480dp-land-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h480dp-land-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h550dp-port-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h550dp-port-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h600dp-port-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h600dp-port-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w320dp-land-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w320dp-land-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w360dp-port-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w360dp-port-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w480dp-port-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w480dp-port-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w550dp-land-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w550dp-land-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w600dp-land-v13.json b/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w600dp-land-v13.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json b/app/build/intermediates/signing_config_versions/debug/signing-config-versions.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt b/app/build/intermediates/stable_resource_ids_file/debug/stableIds.txt
+deleted file mode 100644
+diff --git a/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json b/app/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt b/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+deleted file mode 100644
+diff --git a/app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json b/app/build/intermediates/compatible_screen_manifest/debug/output-metadata.json
+deleted file mode 100644
+diff --git a/app/build/intermediates/dex_number_of_buckets_file/debug/out b/app/build/intermediates/dex_number_of_buckets_file/debug/out
+deleted file mode 100644
+diff --git a/app/build/intermediates/dex_archive_input_jar_hashes/debug/out b/app/build/intermediates/dex_archive_input_jar_hashes/debug/out
+deleted file mode 100644
+diff --git a/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt b/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+deleted file mode 100644
+diff --git a/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar b/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar
+deleted file mode 100644
